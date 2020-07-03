@@ -14,6 +14,8 @@ Make sure you have the following list of dependencies for this project installed
 
 ## Usage
 First download the project as zip archive and extract it to your desired location or just clone the repository using,
+Then download the dataset using the link 
+<a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews"> Kaggle </a>
 
 ```
 $ git clone https://github.com/pranitbose/sentiment-analysis.git
