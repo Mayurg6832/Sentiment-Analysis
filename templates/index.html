@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Sentiment Analysis</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<form action="{{ url_for('predict')}}" method='post'>
+	<section class="text-gray-500 body-font bg-gray-900">
+		  <div class="container flex flex-wrap px-5 py-24 mx-auto items-center">
+		    <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 md:mb-0 mb-10 pb-10 border-b border-gray-800">
+			      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Sentiment Analysis</h1>
+			      <p class="leading-relaxed text-base">A classification model based on Natural Language Processing that takes a review as input and gives the output weather the review is Positive or Negative.</p>
+			      <textarea id="story" name="review" rows="8" cols="50" placeholder="Type..."></textarea><br>
+			      <button class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded" type="submit">Predict</button>
+		    </div>
+		    <div class="flex flex-col md:w-1/2 md:pl-12">
+		      <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">RESULT</h2>
+		      <nav class="flex flex-wrap list-none -mb-1">
+		         <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">{{ prediction_text }}</h1>
+		      </nav>
+		    </div>
+		  </div>
+		</section>
+</form>
+
+<style type="text/css">
+textarea {
+	color:black;
+	font-size: .8rem;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 1px 1px 1px #999;
+}
+body{
+    background-color: rgb(26, 32, 44);
+}
+</style>
+  	</body>
+</html>
+
+
+
